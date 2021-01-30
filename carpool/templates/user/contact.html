@@ -1,0 +1,24 @@
+{% extends 'driver/base.html' %} {% load bootstrap4 %} {% load static%}
+
+{% block content %}
+{% include "navbar.html" %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-6">
+            <h1 style="font-weight: bolder; color: blue; padding-bottom: 20px;">Driver's Information</h1>
+            <img class="rounded-circle account-profile " src="{{ user.profile.image.url }}" alt="user" height="200px"
+                width="200px">
+            <div class="media-container">
+                <h2 class="account-header">Name: {{user.username}}</h2>
+                <p class="text-info">Email: {{user.email}}</p>
+            </div>
+            <p class="ml-3">Bio: {{user.profile.bio}}</p>
+            <a class="btn btn-info" href="{% url 'update' %}">Update Profile</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'driver/base.html' %} {% load bootstrap4 %} {% load static%}
+
+{% block content %}
+{% include "navbar.html" %}
+  <div class="container">                  
+              <div class="header">
+                 <h1 style="text-align: center;">
+                      <strong style="color:#b5179e;">Always the ride you want</strong></h1>
+                  <img class="img-responsive" src="/static/img/last.jpg" alt="" style="width: 1000px; height: fit-content;"> 
+                  <h2 style="text-align:center; padding-top: 50px; color:#b5179e;">The best way to get wherever you're going</h2>
+                  <div class="row" style="text-align:center; padding-top: 50px;"> 
+                  <div class="col-md-4">  
+                      <h3>Easiest way around</h3>
+                      <p>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there,
+                          just step out. Payment is completely seamless...</p>
+                  </div>
+                  <div class="col-md-4">  
+                      <h3>Anywhere, anytime</h3>
+                      <p>Daily commute. Errand across town. Early morning flight. Late night drinks. Wherever you’re headed, count on
+                          Uber for a ride—no reservations required...</p>
+                  </div>
+                  <div class="col-md-4" > 
+                      <h3>Low-cost to luxury</h3>
+                      <p>Economy cars at everyday prices are always available. For special occasions, no occasion at all, or when you
+                          just a need a bit more room, call a black car or SUV...</p> 
+                  </div>         
+              </div>
+          </div>
+      
+      
+      <div id="container">
+        <h1 style="text-align: center; color:#b5179e;">Pick A Destination</h1>
+          <div class="row"> 
+            <div class="col-md-6" style="padding-top: 80px;"> 
+                <small style="font-weight: bold; color:#b5179e;">Choose mode of transportation:</small>
+                <div id="mode-selector" class="controls">
+                    <input type="radio" name="type" id="changemode-bike" checked="checked">
+                    <label for="changemode-walking">Bike</label>
+                    <input type="radio" name="type" id="changemode-transit">
+                    <label for="changemode-transit">Transit</label>
+                    <input type="radio" name="type" id="changemode-driving">
+                    <label for="changemode-driving">Driving</label>
+                </div>        
+              <div id="mapinput">              
+                  <input id="origin-input" class="controls" style="margin-top: 5%;margin-left: 25%;height: 27px;width: 200px;" type="text" placeholder="Enter an origin location"> 
+                            
+                  <input id="destination-input" class="controls" style="margin-top: 2%;margin-left: 25%;height: 27px;width: 200px;" type="text"
+                      placeholder="Enter a destination location">              
+              </div>             
+            </div>
+            <div class="col-md-6">
+                <div class="mapwelcome">              
+                    <img src="/static/img/taxi.jpeg" style="height: 300px;width: 410px" alt="">              
+                </div>  
+              </div>   
+    </div>
+              <div id="map"></div>
+              
+              <script>
+
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHqC7-MeWJHAx1rXsL91P2fAiiB9n0jqE&libraries=places,geometry&callback=initMap"
+                  async="async" defer="defer"></script>
+      </div>  
+  </div>
+</div>
+
+{% endblock %}

@@ -1,34 +1,38 @@
-{% load bootstrap4 %}
+{% load bootstrap4 %} {% load static %}
 
-{% load static%}
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+    <html lang="en">
 
-  {% if title %}
-  <title>Awwards {{title}}</title>
-  {% else %}
-    <title> Awwards </title>
-  {% endif %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% if title %}
+        <title> {{title}} </title>
+        {% else %}
+        <title>Kapool</title>
+        {% endif %}
 
-  {% block styles %}
-    {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/baseinsta.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet"> 
-  {% endblock %}
+       
+        {% block styles %}
+        {% bootstrap_css %}
 
-</head>
-<body style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');background-size:cover;background-repeat: no-repeat;background-position: center;background-origin: border-box; background-color: chartreuse">
-    {% include "navbar.html" %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% endblock %}
+    </head>
 
-    {% block content %} <h1 class='text-center'></h1> {%endblock%}
+    <body style="background-image: url(/static/img/b.jpeg); color: brown; text-align: center;">
+       
+        {% block content%}
 
-    {% block scripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     {% bootstrap_javascript %}
-    {% endblock %}
-</body>
-</html>
-   
+        {% include "navbar.html" %}
+        {% endblock %}
+
+        {% block scripts %}
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        {% bootstrap_javascript %}
+        {% endblock %}
+    </body>
+
+    </html>
