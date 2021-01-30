@@ -26,7 +26,7 @@ class Driver(models.Model):
     def delete_driver(self):
         self.delete()
 
-class Location (models.Model):
+class Location (models.Model)
 
     longitude = models.CharField(max_length=10)
     latitude = models.CharField(max_length=10)
