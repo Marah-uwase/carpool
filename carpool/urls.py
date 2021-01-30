@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns=[
 
-    url('',views.home,name = 'home')
+    url('',views.home,name = 'home'),
     url('user/profile',views.profile, name = 'Uprofile'),
     url('update/',views.profile_update, name='update'),
     url('user/destination',views.destination, name = 'destination'),
