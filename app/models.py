@@ -47,7 +47,7 @@ class Location (models.Model):
 
 
 
-class Car(models.Model)
+class Car(models.Model):
 
     car_brand = HTMLField(blank=True)
     number_plate = HTMLField(blank=True)
