@@ -46,7 +46,7 @@ def destination(request):
     return render(request, 'driver/destination.html')
 
 
-def contact(request):
+def contac(request):
     return render(request, 'driver/contact')
 
 
