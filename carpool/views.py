@@ -10,7 +10,7 @@ class LoginView(auth_views.LoginView):
     template_name = 'registration/login.html'
     redirect_authenticated_user = True
 
-class LogoutVie(LoginRequiredMixin, auth_views.LogoutView):
+class LogoutView(LoginRequiredMixin, auth_views.LogoutView):
    '''logout view'''
 
 def home(request):
