@@ -8,7 +8,7 @@ import datetime as dt
 import cloudinary
 
 # Create your models here.
-class Passenger(models.Model):
+class Passenger(models.Model)
 
     name = models.OneToOneField(User, related_name='driver_profile',on_delete=models.CASCADE)
     bio =  HTMLField(blank=True)
