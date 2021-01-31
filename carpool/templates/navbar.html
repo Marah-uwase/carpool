@@ -1,7 +1,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border border-2 border-dark rounded-0">
         <div class="container-fluid">
             <a href="/">
-                <i class="fa fa-taxi" style="font-size:48px;color:#b7094c"alt="" width="15%"></i>
+                <i class="fa fa-taxi" style="font-size:48px;color:whitesmoke;"alt="" width="15%"></i>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,17 +10,17 @@
             <div class="collapse navbar-collapse" id="navbarNav" style="font-family: 'Pacifico', cursive; font-size:30px;">
                 <ul class="nav navbar-nav navbar-right">
                   {% if user.is_authenticated %}
-                  <li> <a style="color:#b7094c;" class="nav-item nav-link" href="/">Home</a>
+                  <li> <a style="color:whitesmoke;" class="nav-item nav-link" href="/">Home</a>
                   </li>
                   <hr>
                   <li>
                     <a class="nav-link open-nav" href="driver/destination"><i class="fa fa-user"
-                        style="font-size:30px;color:#b7094c">{{user}}</i></a>
+                        style="font-size:30px;color:whitesmoke">{{user}}</i></a>
                   </li>
                   <li>
-                    <a style="color:#b7094c;" class="nav-item nav-link" href="/logout">Logout</a>
+                    <a style="color:whitesmoke;" class="nav-item nav-link" href="/logout">Logout</a>
                     {% else %}
-                    <a style="color:#b7094c;" class="nav-item nav-link" href="/accounts/login/">Login</a>
+                    <a style="color:whitesmoke;" class="nav-item nav-link" href="/accounts/login/">Login</a>
                     {% endif %}
                   </li>
                 </ul>

@@ -7,10 +7,10 @@
         <div class="col-md-4"></div>
     <div class="col-md-4">
             {% if form.errors %}
-            <p style="font-size:large; color: red;">Password or Username is incorrect</p>
+            <p style="font-size:large; color: red;font-family:'Germania One', cursive;">Password or Username is incorrect</p>
             {% endif %}
             <div class="section">
-                <h1>Kapool Login</h1>
+                <h1>Carpool Login</h1>
                 <div class="form-section">
                     <form action="/accounts/login/" method="POST">
                         {% csrf_token %}
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="section">
-                <p>Don't have an account? <a href="/accounts/register">Sign-Up</a></p>
+                <p style="font-family:'Germania One', cursive;">Don't have an account? <a href="/accounts/register">Sign-Up</a></p>
             </div>
         </div>
     </div>
