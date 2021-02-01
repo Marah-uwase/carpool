@@ -1,4 +1,19 @@
+{% extends "django_registration/base.html" %}
+
+{% block title %}Registration complete{% endblock %}
+{% block body_class %}{{ block.super }} registration_complete{% endblock %}
+
+
+{% block content_title %}
+  <h2>Registration complete</h2>
+{% endblock %}
+
+
+{% block content %}
+ 
 <h3 style="font-size: 30px; text-align:center; padding:30px; padding-top:100px; font-family:'Germania One', cursive; color: brown;">
     Thank you for signing up with us.<br><br> Please click the button below to continue.<br><br>
     <a href="{% url 'home' %}" class="action-button shadow animate blue">Click here.</a>
 </h3>
+{% endblock %}
+

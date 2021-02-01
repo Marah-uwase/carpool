@@ -1,32 +1,39 @@
-{% extends 'base.html' %} {% load bootstrap4 %}
+{% extends 'django_registration/base.html' %}
+{% load bootstrap4 %}
+{% load static %}
 
 {% block content %}
-
-<div class="container" style="color:#cdb4db;">
+<html>
+<body style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') ;background-size:cover;background-repeat: no-repeat;background-position: center;background-origin: border-box; color:powderblue;font-family: 'Germania One', cursive;">
+<div class="container" style="margin-left: 40%; margin-top:10%">
     <div class="row sign-up">
-        <div class="col-md-4"></div>
-    <div class="col-md-4">
+        <div class="col-md-4">
             {% if form.errors %}
-            <p style="font-size:large; color: red;font-family:'Germania One', cursive;">Password or Username is incorrect</p>
+            <p class="small">Password or Username is incorrect</p>
             {% endif %}
             <div class="section">
-                <h1>Carpool Login</h1>
-                <div class="form-section">
-                    <form action="/accounts/login/" method="POST">
-                        {% csrf_token %}
 
+                <h1 style="text-align: center">CARPOOL</h1>
+                <h3>Login</h3>
+                <div class="form-section">
+                    <form method="POST">
+                    
+                        {% csrf_token %}
                         {% bootstrap_form form %}
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-lg" value="Sign In">
+                            <!-- <input type="submit" class="btn btn-primary btn-sm" value="Sign In"> -->
+                            <button type="submit">Log In</button>
                         </div>
                         <input type="hidden" name="next" value="{{next}}">
                     </form>
                 </div>
             </div>
             <div class="section">
-                <p style="font-family:'Germania One', cursive;">Don't have an account? <a href="/accounts/register">Sign-Up</a></p>
+                <p>Don't have an account? <a href="/">Sign-Up</a></p>
             </div>
         </div>
     </div>
 </div>
+</body>
+</html>
 {% endblock %}
