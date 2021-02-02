@@ -2,84 +2,202 @@
 
 {% block content %}
 {% include "navbar.html" %}
-  <div class="container" >                  
-              <div class="header">
-                 <h1 style="text-align: center;">
-                      <strong style="color:#f4acb7;font-family:'Germania One', cursive;">Always the ride you want</strong></h1>
-                  <img class="img-responsive" src="https://images.unsplash.com/photo-1556122071-e404eaedb77f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGNhYnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" style="width: 100%; height: fit-content;"> 
-                  <h2 style="text-align:center; padding-top: 50px; color:#f4acb7; font-family:'Germania One', cursive;">The best way to get wherever you're going</h2>
-                  <div class="row" style="text-align:center; padding-top: 50px;"> 
-                  <div class="col-md-4">  
-                      <h3 style="font-family:'Germania One', cursive;">Easiest way around</h3>
-                      <p style="font-family:'Germania One', cursive;">One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there,
-                          just step out. Payment is completely seamless...</p>
-                  </div>
-                  <div class="col-md-4">  
-                      <h3 style="font-family:'Germania One', cursive;">Anywhere, anytime</h3>
-                      <p style="font-family:'Germania One', cursive;">Daily commute. Errand across town. Early morning flight. Late night drinks. Wherever you’re headed, count on
-                          Uber for a ride—no reservations required...</p>
-                  </div>
-                  <div class="col-md-4" > 
-                      <h3 style="font-family:'Germania One', cursive;">Low-cost to luxury</h3>
-                      <p style="font-family:'Germania One', cursive;">Economy cars at everyday prices are always available. For special occasions, no occasion at all, or when you
-                          just a need a bit more room, call a black car or SUV...</p> 
-                  </div>         
-              </div>
-          </div>
-      
-      
-      <div id="container">
+<div class="container">
+    <div class="header">
+        <h1 style="text-align: center;">
+            <strong style="color:#f4acb7;font-family:'Germania One', cursive;">Always the ride you want</strong>
+        </h1>
+        <img class="img-responsive"
+            src="https://images.unsplash.com/photo-1556122071-e404eaedb77f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGNhYnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            alt="" style="width: 100%; height: fit-content;">
+        <h2 style="text-align:center; padding-top: 50px; color:#f4acb7; font-family:'Germania One', cursive;">The best
+            way to get wherever you're going</h2>
+        <div class="row" style="text-align:center; padding-top: 50px;">
+            <div class="col-md-4">
+                <h3 style="font-family:'Germania One', cursive;">Easiest way around</h3>
+                <p style="font-family:'Germania One', cursive;">One tap and a car comes directly to you. Hop in—your
+                    driver knows exactly where to go. And when you get there,
+                    just step out. Payment is completely seamless...</p>
+            </div>
+            <div class="col-md-4">
+                <h3 style="font-family:'Germania One', cursive;">Anywhere, anytime</h3>
+                <p style="font-family:'Germania One', cursive;">Daily commute. Errand across town. Early morning flight.
+                    Late night drinks. Wherever you’re headed, count on
+                    Uber for a ride—no reservations required...</p>
+            </div>
+            <div class="col-md-4">
+                <h3 style="font-family:'Germania One', cursive;">Low-cost to luxury</h3>
+                <p style="font-family:'Germania One', cursive;">Economy cars at everyday prices are always available.
+                    For special occasions, no occasion at all, or when you
+                    just a need a bit more room, call a black car or SUV...</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="container">
         <h1 style="text-align: center; color:#f4acb7; font-family:'Germania One', cursive;">Pick A Destination</h1>
-          <div class="row"> 
-            <div class="col-md-6" style="padding-top: 80px;"> 
-                <small style="font-weight: bold; color:#f4acb7; font-family:'Germania One', cursive;">Choose mode of transportation:</small>
+        <div class="row">
+            <div class="col-md-6" style="padding-top: 80px;">
+                <small style="font-weight: bold; color:#f4acb7; font-family:'Germania One', cursive;">Choose mode of
+                    transportation:</small>
                 <div id="mode-selector" class="controls">
                     <input type="radio" name="type" id="changemode-bike" checked="checked">
                     <label style="font-family:'Germania One', cursive;" for="changemode-walking">Bike</label>
-                    <input style="font-family:'Germania One', cursive;" type="radio" name="type" id="changemode-transit">
+                    <input style="font-family:'Germania One', cursive;" type="radio" name="type"
+                        id="changemode-transit">
                     <label style="font-family:'Germania One', cursive;" for="changemode-transit">Transit</label>
-                    <input style="font-family:'Germania One', cursive;" type="radio" name="type" id="changemode-driving">
+                    <input style="font-family:'Germania One', cursive;" type="radio" name="type"
+                        id="changemode-driving">
                     <label style="font-family:'Germania One', cursive;" for="changemode-driving">Driving</label>
-                </div>        
-              <div id="mapinput">              
-                  <input id="origin-input" class="controls" style="margin-top: 5%;margin-left: 25%;height: 27px;width: 200px; font-family:'Germania One', cursive;" type="text" placeholder="Enter an origin location"> 
-                            
-                  <input id="destination-input" class="controls" style="margin-top: 2%;margin-left: 25%;height: 27px;width: 200px; font-family:'Germania One', cursive;" type="text"
-                      placeholder="Enter a destination location">              
-              </div>             
+                </div>
+                <div id="mapinput">
+                    <input id="origin-input" class="controls"
+                        style="margin-top: 5%;margin-left: 25%;height: 27px;width: 200px; font-family:'Germania One', cursive;"
+                        type="text" placeholder="Enter an origin location">
+
+                    <input id="destination-input" class="controls"
+                        style="margin-top: 2%;margin-left: 25%;height: 27px;width: 200px; font-family:'Germania One', cursive;"
+                        type="text" placeholder="Enter a destination location">
+                </div>
             </div>
             <div class="col-md-6">
-                <div class="mapwelcome">              
-                    <img src="/static/img/taxi.jpeg" style="height: 300px;width: 410px" alt="">              
-                </div>  
-              </div>   
-    </div>
-            <div id="map"></div>
-            <script>
-                    function initMap() {
+                <div class="mapwelcome">
+                    <img src="/static/img/taxi.jpeg" style="height: 300px;width: 410px" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
 
-                        var options = {
-                            zoom: 8,
-                            center: { lat: 1.2921, lng: 36.8219 }
+        <script>
+            var map,
+                infoWindow;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    mapTypeControl: false,
+                    center: {
+                        lat: -2.108899,
+                        lng: 30.026513
+                        
+            
+                    },
+                    zoom: 17
+                });
+                infoWindow = new google.maps.InfoWindow;
+                new AutocompleteDirectionsHandler(map);
+            }
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var marker1 = new google.maps.Marker({
+                        position: new google.maps.LatLng(pos),
+                        map: map,
+                        title: 'Current Location',
+                        icon: {
+                            url: 'http://maps.google.com/mapfiles/ms/icons/green.png'
                         }
-
-                        var map = new google.maps.Map(document.getElementById('map'), options);
+                    });
+                    infoWindow.open(map);
+                    map.setCenter(pos);
+                    map.setZoom(16);
+                }, function () {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+            function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                infoWindow.setPosition(pos);
+                infoWindow.setContent(
+                    browserHasGeolocation
+                        ? 'Error: The Geolocation service failed.'
+                        : 'Error: Your browser doesn\'t support geolocation.'
+                );
+                infoWindow.open(map);
+            }
+            /**
+            * @constructor
+            */
+            function AutocompleteDirectionsHandler(map) {
+                this.map = map;
+                this.originPlaceId = null;
+                this.destinationPlaceId = null;
+                this.travelMode = 'DRIVING';
+                var originInput = document.getElementById('origin-input');
+                var destinationInput = document.getElementById('destination-input');
+                this.directionsService = new google.maps.DirectionsService;
+                this.directionsDisplay = new google.maps.DirectionsRenderer;
+                this.directionsDisplay.setMap(map);
+                var originAutocomplete = new google.maps.places.Autocomplete(originInput, { placeIdOnly: true });
+                var destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput, { placeIdOnly: true });
+                this.setupClickListener('changemode-bike', 'BIKE');
+                this.setupClickListener('changemode-transit', 'TRANSIT');
+                this.setupClickListener('changemode-driving', 'DRIVING');
+                this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
+                this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+                this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+                this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+            }
+            AutocompleteDirectionsHandler.prototype.setupClickListener = function (id, mode) {
+                var radioButton = document.getElementById(id);
+                var me = this;
+                radioButton.addEventListener('click', function () {
+                    me.travelMode = mode;
+                    me.route();
+                });
+            };
+            AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (autocomplete, mode) {
+                var me = this;
+                autocomplete.bindTo('bounds', this.map);
+                autocomplete.addListener('place_changed', function () {
+                    var place = autocomplete.getPlace(bounds);
+                    if (!place.place_id) {
+                        window.alert("Please select an option from the dropdown list.");
+                        return;
                     }
-            </script>
+                    if (mode === 'ORIG') {
+                        me.originPlaceId = place.place_id;
+                    } else {
+                        me.destinationPlaceId = place.place_id;
+                    }
+                    me.route();
+                });
+            };
+            AutocompleteDirectionsHandler.prototype.route = function () {
+                if (!this.originPlaceId || !this.destinationPlaceId) {
+                    return;
+                }
+                var me = this;
+                this.directionsService.route({
+                    origin: {
+                        'placeId': this.originPlaceId
+                    },
+                    destination: {
+                        'placeId': this.destinationPlaceId
+                    },
+                    travelMode: this.travelMode
+                }, function (response, status) {
+                    if (status === 'OK') {
+                        me.directionsDisplay.setDirections(response);
+                    } else {
+                        window.alert('Directions request failed due to ' + status);
+                    }
+                });
+            };     
+        </script>
 
-            <script defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-5lDNU4b-2UxLCF6DCBQ10HViTn9EsPM&callback=initMap">
-            </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv9Yc1eQAYKqm3qXBpUBfEa-CYW9CVoTQ&callback=initMap"
+type="text/javascript"></script>
 
-             
-      </div>  
-  </div>
+    </div>
 </div>
-<style>
-    #map{
-        height:400px;
-        width:100%;
-    }
+</div>
+
 </style>
 
 {% endblock %}
+
+

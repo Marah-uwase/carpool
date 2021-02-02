@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+from decouple import config
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -84,11 +91,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'karpool',
-        'USER': 'ariso',
-        'PASSWORD':'Barbie1991',
+        'USER': 'maranatha',
+        'PASSWORD':'maman',
     }
 }
 
+cloudinary.config(   
+  api_key = 'AIzaSyCv9Yc1eQAYKqm3qXBpUBfEa-CYW9CVoTQ', 
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
